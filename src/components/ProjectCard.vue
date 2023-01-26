@@ -3,6 +3,14 @@
   name:'ProjectCard',
   props:{
     project:Object
+  },
+  methods:{
+    cutText(text){
+      if(text.length > 100){
+        text=text.slice(0, 100)+'...'
+      }
+      return text
+    }
   }
 
 }
@@ -14,7 +22,7 @@
       <div class="card-body">
         <h4 class="card-title">{{project.name}}</h4>
         <h5 class="card-title">{{project.client_name}}</h5>
-        <p class="card-text" v-html="project.summary"></p>
+        <p class="card-text">{{this.cutText(project.summary)}}</p>
         <div class="technologies">
           <span v-for="technology in project.technologies" :key="technology.id" class="badge">{{technology.name}}</span>
         </div>

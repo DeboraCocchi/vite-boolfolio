@@ -20,7 +20,8 @@ export default {
       .catch( err=>{
         console.log('Si è verificato un errore');
       })
-    }
+    },
+    
   },
   mounted(){
     this.getProjects();
