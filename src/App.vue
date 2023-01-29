@@ -1,10 +1,16 @@
 <script>
 import axios from 'axios'
-import {store} from './data/store'
+import {apiUrl} from './data/data'
 import AppHeader from '../src/components/AppHeader.vue';
 import AppMain from '../src/components/AppMain.vue';
 export default {
   name:'App',
+  data(){
+    return{
+      apiUrl,
+      project:[]
+
+  }},
   components:{
     AppHeader,
     AppMain,
@@ -12,10 +18,10 @@ export default {
   },
   methods:{
     getProjects(){
-      axios.get(store.apiUrl)
+      axios.get(apiUrl)
       .then(result =>{
         console.log(result.data.projects.data);
-        store.projects= result.data.projects.data;
+        this.projects= result.data.projects.data;
       })
       .catch( err=>{
         console.log('Si è verificato un errore');
