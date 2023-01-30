@@ -1,5 +1,4 @@
-@use 'node_modules/bootstrap/scss/bootstrap';
-
+@import '/node_modules/bootstrap';
 
 a{
     color:white;
@@ -21,12 +20,19 @@ a{
     z-index:10;
 }
 
+.purple, h1{
+    color:#9160f5;
+  }
+  .darkpurple{
+      color:#3a0764;
+  }
+
 body{
     background-color: rgba(238, 238, 238, 0.7);
 }
 
 main{
-    padding:90px 30px 30px;
+    padding:30px;
 
 }
 

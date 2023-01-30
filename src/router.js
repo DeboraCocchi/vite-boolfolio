@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import AppMain from './components/Appmain.vue'
+import About from './components/About.vue'
 import ProjectDetail from './components/ProjectDetail.vue'
 const router = createRouter({
     history:createWebHistory(),
@@ -15,11 +16,12 @@ const router = createRouter({
             name:'project-detail',
             component:ProjectDetail
         },
-        // {
-        //     path:'/tipi',
-        //     name:'types',
-        //     component:Types
-        // },
+        {
+            path:'/about',
+             name:'about',
+             component:About
+        
+            },
         // {
         //     path:'/tecnologie',
         //     name:'technologies',
